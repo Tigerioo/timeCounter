@@ -30,13 +30,23 @@
       <file leaf-file-name="MainView.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ioman/counter/view/MainView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="59">
-              <caret line="139" column="47" lean-forward="true" selection-start-line="139" selection-start-column="47" selection-end-line="139" selection-end-column="47" />
+            <state relative-caret-position="209">
+              <caret line="42" column="62" lean-forward="true" selection-start-line="42" selection-start-column="62" selection-end-line="42" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2547#2750#0" expanded="true" />
-                <element signature="e#2749#2750#0" expanded="true" />
+                <element signature="e#3673#3876#0" expanded="true" />
+                <element signature="e#3875#3876#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Window.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/src.zip!/java/awt/Window.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="906" column="16" lean-forward="false" selection-start-line="906" selection-start-column="16" selection-end-line="906" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -475,12 +485,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1496904261098</updated>
-      <workItem from="1496904262957" duration="6765000" />
+      <workItem from="1496904262957" duration="9021000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6765000" />
+    <option name="totallyTimeSpent" value="9021000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="726" extended-state="0" />
@@ -505,9 +515,9 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5184564" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Reviews" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -614,14 +624,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/src.zip!/java/awt/Window.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="906" column="16" lean-forward="false" selection-start-line="906" selection-start-column="16" selection-end-line="906" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ioman/counter/view/MainView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="139" column="47" lean-forward="true" selection-start-line="139" selection-start-column="47" selection-end-line="139" selection-end-column="47" />
+        <state relative-caret-position="209">
+          <caret line="42" column="62" lean-forward="true" selection-start-line="42" selection-start-column="62" selection-end-line="42" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2547#2750#0" expanded="true" />
-            <element signature="e#2749#2750#0" expanded="true" />
+            <element signature="e#3673#3876#0" expanded="true" />
+            <element signature="e#3875#3876#0" expanded="true" />
           </folding>
         </state>
       </provider>
