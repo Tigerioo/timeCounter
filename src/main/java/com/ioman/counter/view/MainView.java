@@ -1,9 +1,20 @@
 package com.ioman.counter.view;
 
+import com.sun.media.sound.WaveFileReader;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import sun.audio.AudioPlayer;
+import sun.audio.AudioStream;
+
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.*;
 import javax.swing.border.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * <p>Title: com.ioman.counter.view</p>
@@ -21,7 +32,11 @@ public class MainView implements ActionListener, KeyListener {
 	private JFrame frame;
 	private JPanel panel;
 	private JRadioButton hourBtn1, hourBtn2;
+	private JButton start, pause, stop;
 	private JComboBox minuteComboBox;
+	private JLabel usedTimeText;
+	private int count;
+	private boolean isRunning;
 	
 	public static void main(String[] args) {
 		
@@ -57,7 +72,7 @@ public class MainView implements ActionListener, KeyListener {
 		
 		panel = new JPanel();
 		
-		int counterCount = 8;
+		int counterCount = 1;
 		
 		panel.setBorder(new EmptyBorder(5,5,5,5));
 		panel.setLayout(new GridLayout(counterCount, 1));
@@ -86,14 +101,7 @@ public class MainView implements ActionListener, KeyListener {
 		
 		panel.add(controlButton());
 		
-//		LineBorder lineBorder = (LineBorder)BorderFactory.createLineBorder(Color.black);// 创建线形边框
-		
-//		EtchedBorder etchedBorder = (EtchedBorder)BorderFactory.createEtchedBorder();// 创建蚀刻式边框
-//
 		BevelBorder raisedBevelBorder = (BevelBorder)BorderFactory.createRaisedBevelBorder();// 创建浮雕式边框
-//
-//		BevelBorder loweredBevelBorder = (BevelBorder)BorderFactory.createLoweredBevelBorder();// 创建下沉边框
-		
 		panel.setBorder(raisedBevelBorder);
 		
 		return panel;
@@ -188,10 +196,10 @@ public class MainView implements ActionListener, KeyListener {
 		
 		panel.setLayout(new GridLayout(2, 1));
 		
-		JLabel usedTime = new JLabel("0 小时 00 分 01 秒");
+		usedTimeText = new JLabel("0 小时 00 分 01 秒");
 		JLabel leftTime = new JLabel("0 小时 00 分 01 秒");
 		
-		panel.add(usedTime);
+		panel.add(usedTimeText);
 		panel.add(leftTime);
 		
 		return panel;
@@ -203,9 +211,13 @@ public class MainView implements ActionListener, KeyListener {
 		
 		panel.setLayout(new GridLayout(3, 1));
 		
-		JButton start = new JButton("开始计时");
-		JButton pause = new JButton("暂停计时");
-		JButton stop = new JButton("停止计时");
+		start = new JButton("开始计时");
+		pause = new JButton("暂停计时");
+		stop = new JButton("停止计时");
+		
+		start.addActionListener(this);
+		pause.addActionListener(this);
+		stop.addActionListener(this);
 		
 		panel.add(start);
 		panel.add(pause);
@@ -221,7 +233,40 @@ public class MainView implements ActionListener, KeyListener {
 	 */
 	public void actionPerformed(ActionEvent e) {
 		
+		if(e.getSource() == start){
+			
+			new Thread(new TimeCounter()).start();
+		}
+	}
+	
+	class TimeCounter implements Runnable{
 		
+		/**
+		 * When an object implementing interface <code>Runnable</code> is used
+		 * to create a thread, starting the thread causes the object's
+		 * <code>run</code> method to be called in that separately executing
+		 * thread.
+		 * <p>
+		 * The general contract of the method <code>run</code> is that it may
+		 * take any action whatsoever.
+		 *
+		 * @see Thread#run()
+		 */
+		public void run() {
+			
+			if(isRunning) return ;
+			
+			isRunning = true;
+			for (int i = 1; i<=6; i++){
+				usedTimeText.setText("0 小时 00 分 " + i + " 秒");
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e1) {
+				}
+			}
+			
+			isRunning = false;
+		}
 	}
 	
 	/**
