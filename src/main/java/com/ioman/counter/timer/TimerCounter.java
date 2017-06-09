@@ -136,6 +136,7 @@ public class TimerCounter implements Runnable, ActionListener{
 			if(isRunning){
 				isRunning = false;
 				setButtonStatus();
+				timerPanel.getStop().setEnabled(true);
 			}
 			
 			
@@ -167,11 +168,11 @@ public class TimerCounter implements Runnable, ActionListener{
 		if(isRunning){//如果正在计时中
 			timerPanel.getStart().setEnabled(false);
 			timerPanel.getPause().setEnabled(true);
-//			timerPanel.getStop().setEnabled(true);
+			timerPanel.getStop().setEnabled(true);
 		}else {
 			timerPanel.getStart().setEnabled(true);
 			timerPanel.getPause().setEnabled(false);
-//			timerPanel.getStop().setEnabled(false);
+			timerPanel.getStop().setEnabled(false);
 		}
 	}
 	
