@@ -38,7 +38,7 @@ public class MainView {
 		double height = Toolkit.getDefaultToolkit().getScreenSize().getHeight();
 		
 		frame.setMinimumSize(new Dimension(680, 200));
-		frame.setSize((int) width, (int) height);
+		frame.setSize((int) width * 3/4, (int) height * 4/5);
 		frame.setTitle("慢速烘箱定时提醒器");
 		Image icon = Toolkit.getDefaultToolkit().getImage("");
 		frame.setIconImage(icon);
