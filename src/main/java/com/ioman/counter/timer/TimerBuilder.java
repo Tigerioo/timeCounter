@@ -19,7 +19,8 @@ import java.awt.*;
 public class TimerBuilder {
 	
 	private JLabel title;//闹钟标题
-	private ButtonGroup hourGroup;
+	private JRadioButton twoHour;//2小时选项
+	private JRadioButton threeHour;//3小时选项
 	private JComboBox minuteComboBox;//选择分钟
 	private JLabel timeUsedText;//使用时间文本
 	private JLabel timeLeftText;//剩余时间文本
@@ -46,21 +47,18 @@ public class TimerBuilder {
 	
 	public TimerBuilder hour(){
 		
-		JRadioButton hourBtn1 = new JRadioButton("2小时", true);
-		JRadioButton hourBtn2 = new JRadioButton("3小时");
+		JRadioButton twoHour = new JRadioButton("2小时", true);
+		JRadioButton threeHour = new JRadioButton("3小时");
 		
-		ButtonGroup hourGroup = new ButtonGroup();
-		hourGroup.add(hourBtn1);
-		hourGroup.add(hourBtn2);
-		
-		this.hourGroup = hourGroup;
+		this.twoHour = twoHour;
+		this.threeHour = threeHour;
 		
 		return this;
 	}
 	
 	public TimerBuilder minute(){
 		
-		final JComboBox minuteComboBox = new JComboBox(new String[]{"1", "2", "3", "4", "5", "6", "7",
+		final JComboBox minuteComboBox = new JComboBox(new String[]{"0", "1", "2", "3", "4", "5", "6", "7",
 				"8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21",
 				"22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37",
 				"38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51",
@@ -109,7 +107,8 @@ public class TimerBuilder {
 		
 		TimerPanel panel = new TimerPanel();
 		panel.setTitle(title);
-		panel.setHourGroup(hourGroup);
+		panel.setTwoHour(twoHour);
+		panel.setThreeHour(threeHour);
 		panel.setMinuteComboBox(minuteComboBox);
 		panel.setTimeUsedText(timeUsedText);
 		panel.setTimeLeftText(timeLeftText);

@@ -57,7 +57,7 @@ public class MainView {
 		
 		panel = new JPanel();
 		
-		int counterCount = 8;
+		int counterCount = 1;
 		
 		panel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		panel.setLayout(new GridLayout(counterCount, 1));
@@ -77,7 +77,7 @@ public class MainView {
 			
 			panel.add(timerPaint.paint());
 			
-			TimerCounter timer = new TimerCounter(timerPanel);
+			TimerCounter timer = new TimerCounter(timerPanel, frame);
 			new Thread(timer).start();
 		}
 		

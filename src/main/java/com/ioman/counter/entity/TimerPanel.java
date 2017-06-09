@@ -16,7 +16,8 @@ import javax.swing.*;
 public class TimerPanel {
 	
 	private JLabel title;//闹钟标题
-	private ButtonGroup hourGroup;
+	private JRadioButton twoHour;//2小时选项
+	private JRadioButton threeHour;//3小时选项
 	private JComboBox minuteComboBox;//选择分钟
 	private JLabel timeUsedText;//使用时间文本
 	private JLabel timeLeftText;//剩余时间文本
@@ -34,12 +35,20 @@ public class TimerPanel {
 		this.title = title;
 	}
 	
-	public ButtonGroup getHourGroup() {
-		return hourGroup;
+	public JRadioButton getTwoHour() {
+		return twoHour;
 	}
 	
-	public void setHourGroup(ButtonGroup hourGroup) {
-		this.hourGroup = hourGroup;
+	public void setTwoHour(JRadioButton twoHour) {
+		this.twoHour = twoHour;
+	}
+	
+	public JRadioButton getThreeHour() {
+		return threeHour;
+	}
+	
+	public void setThreeHour(JRadioButton threeHour) {
+		this.threeHour = threeHour;
 	}
 	
 	public JComboBox getMinuteComboBox() {
@@ -66,20 +75,20 @@ public class TimerPanel {
 		this.timeLeftText = timeLeftText;
 	}
 	
-	public JLabel getTimeLeftDetail() {
-		return timeLeftDetail;
-	}
-	
-	public void setTimeLeftDetail(JLabel timeLeftDetail) {
-		this.timeLeftDetail = timeLeftDetail;
-	}
-	
 	public JLabel getTimeUsedDetail() {
 		return timeUsedDetail;
 	}
 	
 	public void setTimeUsedDetail(JLabel timeUsedDetail) {
 		this.timeUsedDetail = timeUsedDetail;
+	}
+	
+	public JLabel getTimeLeftDetail() {
+		return timeLeftDetail;
+	}
+	
+	public void setTimeLeftDetail(JLabel timeLeftDetail) {
+		this.timeLeftDetail = timeLeftDetail;
 	}
 	
 	public JButton getStart() {
