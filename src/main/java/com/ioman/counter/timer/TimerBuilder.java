@@ -1,4 +1,4 @@
-package com.ioman.counter;
+package com.ioman.counter.timer;
 
 import com.ioman.counter.entity.TimerPanel;
 
@@ -9,7 +9,7 @@ import java.awt.*;
  * <p>Title: com.ioman.counter</p>
  * <p/>
  * <p>
- * Description: TODO
+ * Description: 元素建造者
  * </p>
  * <p/>
  *

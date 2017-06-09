@@ -6,7 +6,7 @@ import javax.swing.*;
  * <p>Title: com.ioman.counter.entity</p>
  * <p/>
  * <p>
- * Description: TODO
+ * Description: 单个timer实体
  * </p>
  * <p/>
  *

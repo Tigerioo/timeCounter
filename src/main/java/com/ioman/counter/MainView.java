@@ -1,22 +1,17 @@
-package com.ioman.counter.view;
+package com.ioman.counter;
 
-import com.ioman.counter.*;
-import com.ioman.counter.Timer;
 import com.ioman.counter.entity.TimerPanel;
+import com.ioman.counter.timer.*;
 
 import javax.swing.*;
-import javax.swing.border.BevelBorder;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
-import java.util.Enumeration;
 
 /**
  * <p>Title: com.ioman.counter.view</p>
  * <p/>
  * <p>
- * Description: TODO
+ * Description: 首页View
  * </p>
  * <p/>
  *
@@ -82,7 +77,7 @@ public class MainView {
 			
 			panel.add(timerPaint.paint());
 			
-			Timer timer = new Timer(timerPanel);
+			TimerCounter timer = new TimerCounter(timerPanel);
 			new Thread(timer).start();
 		}
 		

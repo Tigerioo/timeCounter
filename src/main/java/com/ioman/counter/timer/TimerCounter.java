@@ -1,4 +1,4 @@
-package com.ioman.counter;
+package com.ioman.counter.timer;
 
 import com.ioman.counter.entity.TimerPanel;
 
@@ -11,18 +11,18 @@ import java.awt.event.ItemListener;
  * <p>Title: com.ioman.counter</p>
  * <p/>
  * <p>
- * Description: TODO
+ * Description: 计时计算线程
  * </p>
  * <p/>
  *
  * @author Lynn
  *         CreateTime：6/9/17
  */
-public class Timer implements Runnable, ActionListener{
+public class TimerCounter implements Runnable, ActionListener{
 	
 	private TimerPanel timerPanel;
 	
-	public Timer(TimerPanel timerPanel) {
+	public TimerCounter(TimerPanel timerPanel) {
 		this.timerPanel = timerPanel;
 	}
 	

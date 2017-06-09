@@ -1,4 +1,4 @@
-package com.ioman.counter;
+package com.ioman.counter.timer;
 
 import com.ioman.counter.entity.TimerPanel;
 
@@ -12,7 +12,7 @@ import java.util.Enumeration;
  * <p>Title: com.ioman.counter</p>
  * <p/>
  * <p>
- * Description: TODO
+ * Description: 布局绘制类
  * </p>
  * <p/>
  *
