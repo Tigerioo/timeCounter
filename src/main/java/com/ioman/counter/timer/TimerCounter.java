@@ -31,10 +31,12 @@ public class TimerCounter implements Runnable, ActionListener{
 	private boolean isRunning;//是否在计时
 	private boolean isAlarm;
 	private JFrame frame;
+	private String title;
 	
 	public TimerCounter(TimerPanel timerPanel, JFrame frame) {
 		this.timerPanel = timerPanel;
 		this.frame = frame;
+		this.title = timerPanel.getTitle().getText();
 	}
 	
 	/**
@@ -50,13 +52,20 @@ public class TimerCounter implements Runnable, ActionListener{
 	 */
 	public void run() {
 		
+		reset();
+		
+		addToListener();
+	}
+	
+	private void reset(){
+		
+		setButtonStatus();
+		
 		//设置总秒数
 		initTotalSec();
 		
 		//重置时间提示文本
 		resetTimeText();
-		
-		addToListener();
 	}
 	
 	private void resetTimeText(){
@@ -64,12 +73,14 @@ public class TimerCounter implements Runnable, ActionListener{
 		if(isRunning) return;
 		
 		timerPanel.getTimeLeftDetail().setText(formatSecond(leftSec));
+		timerPanel.getTimeUsedDetail().setText(formatSecond(usedSec));
 	}
 	
 	private void initTotalSec(){
 		
 		if(isRunning) return;
 		
+		usedSec = 0;
 		leftSec = 0;//初始化
 		
 		//统计小时
@@ -98,8 +109,7 @@ public class TimerCounter implements Runnable, ActionListener{
 			public void itemStateChanged(ItemEvent e) {
 				if (ItemEvent.SELECTED == e.getStateChange()) {
 					
-					initTotalSec();
-					resetTimeText();
+					reset();
 				}
 			}
 		});
@@ -118,30 +128,50 @@ public class TimerCounter implements Runnable, ActionListener{
 				
 				isRunning = true;//开始计时
 				new Thread(new TickTickRunner()).start();
-				
+				setButtonStatus();
 			}
 			
 		}else if(e.getSource() == timerPanel.getPause()) {
 			
-			isRunning = false;
+			if(isRunning){
+				isRunning = false;
+				setButtonStatus();
+			}
+			
 			
 		}else if(e.getSource() == timerPanel.getStop()){
 			
-			isRunning = false;
-			isAlarm = false;
-			leftSec = 0;
+			int status = JOptionPane.showConfirmDialog(frame, "确定要结束?", title, JOptionPane.YES_NO_OPTION);
 			
-			initTotalSec();
-			resetTimeText();
+			if(status == 0) {
+				
+				isRunning = false;
+				isAlarm = false;
+				leftSec = 0;
+				usedSec = 0;
+				
+				reset();
+			}
 			
 		}else if(e.getSource() == timerPanel.getTwoHour()) {
 			
-			initTotalSec();
-			resetTimeText();
+			reset();
 		}else if(e.getSource() == timerPanel.getThreeHour()){
 			
-			initTotalSec();
-			resetTimeText();
+			reset();
+		}
+	}
+	
+	public void setButtonStatus(){
+		
+		if(isRunning){//如果正在计时中
+			timerPanel.getStart().setEnabled(false);
+			timerPanel.getPause().setEnabled(true);
+//			timerPanel.getStop().setEnabled(true);
+		}else {
+			timerPanel.getStart().setEnabled(true);
+			timerPanel.getPause().setEnabled(false);
+//			timerPanel.getStop().setEnabled(false);
 		}
 	}
 	
@@ -196,9 +226,12 @@ public class TimerCounter implements Runnable, ActionListener{
 				}
 				
 				leftSec--;
+				usedSec++;
 				
-				String timeText = formatSecond(leftSec);
-				timerPanel.getTimeLeftDetail().setText(timeText);
+				String leftTimeText = formatSecond(leftSec);
+				String usedTimeText = formatSecond(usedSec);
+				timerPanel.getTimeLeftDetail().setText(leftTimeText);
+				timerPanel.getTimeUsedDetail().setText(usedTimeText);
 				
 				if (leftSec == 0){
 					//播放声音
@@ -206,11 +239,12 @@ public class TimerCounter implements Runnable, ActionListener{
 					new Thread(new AlarmAudio()).start();
 					
 //					JOptionPane.showMessageDialog(frame, timerPanel.getTitle().getText() + " 时间到！！！");
-					int status = JOptionPane.showConfirmDialog(frame, timerPanel.getTitle().getText() + " 时间到！！！", "计时提醒", JOptionPane.CLOSED_OPTION);
+					int status = JOptionPane.showConfirmDialog(frame, timerPanel.getTitle().getText() + " 时间到！！！", title, JOptionPane.CLOSED_OPTION);
 					if(status == 0){
 						isAlarm = false;
 					}
 					isRunning = false;
+					setButtonStatus();
 					initTotalSec();
 					resetTimeText();
 				}

@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b771fb12-1c4d-4dde-803f-fca41f48a4ea" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/alarm.wav" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/ioman/counter/util/MP3Player.java" afterPath="$PROJECT_DIR$/src/main/java/com/ioman/counter/util/AudioPlayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ioman/counter/MainView.java" afterPath="$PROJECT_DIR$/src/main/java/com/ioman/counter/MainView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ioman/counter/entity/TimerPanel.java" afterPath="$PROJECT_DIR$/src/main/java/com/ioman/counter/entity/TimerPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ioman/counter/timer/TimerBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/com/ioman/counter/timer/TimerBuilder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ioman/counter/timer/TimerCounter.java" afterPath="$PROJECT_DIR$/src/main/java/com/ioman/counter/timer/TimerCounter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ioman/counter/timer/TimerPaint.java" afterPath="$PROJECT_DIR$/src/main/java/com/ioman/counter/timer/TimerPaint.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -34,8 +27,8 @@
       <file leaf-file-name="TimerCounter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ioman/counter/timer/TimerCounter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1005">
-              <caret line="212" column="38" lean-forward="true" selection-start-line="212" selection-start-column="38" selection-end-line="212" selection-end-column="38" />
+            <state relative-caret-position="345">
+              <caret line="153" column="13" lean-forward="false" selection-start-line="153" selection-start-column="13" selection-end-line="153" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -47,7 +40,7 @@
         <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/src.zip!/javax/swing/JOptionPane.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="355" column="36" lean-forward="false" selection-start-line="355" selection-start-column="36" selection-end-line="355" selection-end-column="36" />
+              <caret line="714" column="22" lean-forward="false" selection-start-line="714" selection-start-column="22" selection-end-line="714" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -762,12 +755,12 @@
       <option name="presentableId" value="Default" />
       <updated>1496904261098</updated>
       <workItem from="1496904262957" duration="9124000" />
-      <workItem from="1496972313844" duration="19474000" />
+      <workItem from="1496972313844" duration="20984000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28598000" />
+    <option name="totallyTimeSpent" value="30108000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="726" extended-state="6" />
@@ -792,7 +785,7 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -851,7 +844,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ioman/counter/timer/TimerCounter.java</url>
-          <line>241</line>
+          <line>275</line>
           <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
@@ -1062,15 +1055,15 @@
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/src.zip!/javax/swing/JOptionPane.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="355" column="36" lean-forward="false" selection-start-line="355" selection-start-column="36" selection-end-line="355" selection-end-column="36" />
+          <caret line="714" column="22" lean-forward="false" selection-start-line="714" selection-start-column="22" selection-end-line="714" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ioman/counter/timer/TimerCounter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1005">
-          <caret line="212" column="38" lean-forward="true" selection-start-line="212" selection-start-column="38" selection-end-line="212" selection-end-column="38" />
+        <state relative-caret-position="345">
+          <caret line="153" column="13" lean-forward="false" selection-start-line="153" selection-start-column="13" selection-end-line="153" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
