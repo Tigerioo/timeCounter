@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/xiaobin_counter.iml" filepath="$PROJECT_DIR$/xiaobin_counter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/timeCounter.iml" filepath="$PROJECT_DIR$/timeCounter.iml" />
     </modules>
   </component>
 </project>

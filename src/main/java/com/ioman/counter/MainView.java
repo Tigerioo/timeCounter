@@ -40,7 +40,7 @@ public class MainView {
 		frame.setMinimumSize(new Dimension(680, 200));
 		frame.setSize((int) width * 3/4, (int) height * 4/5);
 		frame.setTitle("慢速烘箱定时提醒器");
-		Image icon = Toolkit.getDefaultToolkit().getImage("");
+		Image icon = Toolkit.getDefaultToolkit().getImage("sandglass.png");
 		frame.setIconImage(icon);
 		frame.setDefaultCloseOperation(3);
 		
@@ -57,7 +57,7 @@ public class MainView {
 		
 		panel = new JPanel();
 		
-		int counterCount = 1;
+		int counterCount = 8;
 		
 		panel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		panel.setLayout(new GridLayout(counterCount, 1));

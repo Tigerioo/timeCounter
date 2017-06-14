@@ -84,6 +84,7 @@ public class TimerBuilder {
 		
 		JLabel timeUsedDetail = new JLabel("0 小时 00 分 00 秒");
 		JLabel timeLeftDetail = new JLabel("0 小时 00 分 00 秒");
+		timeLeftDetail.setForeground(Color.RED);
 		this.timeUsedDetail = timeUsedDetail;
 		this.timeLeftDetail = timeLeftDetail;
 		
@@ -95,6 +96,7 @@ public class TimerBuilder {
 		JButton start = new JButton("开始计时");
 		JButton pause = new JButton("暂停计时");
 		JButton stop = new JButton("停止计时");
+		stop.setForeground(Color.BLUE);
 		
 		this.start = start;
 		this.pause = pause;
