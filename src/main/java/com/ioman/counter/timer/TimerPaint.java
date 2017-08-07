@@ -68,15 +68,17 @@ public class TimerPaint {
 	 *
 	 * @return
 	 */
-	private JPanel hourPanel(JRadioButton twoHour, JRadioButton threeHour) {
+	private JPanel hourPanel(JRadioButton zeroHour, JRadioButton twoHour, JRadioButton threeHour) {
 		
 		JPanel hourPanel = new JPanel();
-		hourPanel.setLayout(new GridLayout(2, 1));
+		hourPanel.setLayout(new GridLayout(3, 1));
 		
 		ButtonGroup group = new ButtonGroup();
+		group.add(zeroHour);
 		group.add(twoHour);
 		group.add(threeHour);
 		
+		hourPanel.add(zeroHour);
 		hourPanel.add(twoHour);
 		hourPanel.add(threeHour);
 		

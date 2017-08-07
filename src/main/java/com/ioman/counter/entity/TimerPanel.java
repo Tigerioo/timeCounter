@@ -16,6 +16,7 @@ import javax.swing.*;
 public class TimerPanel {
 	
 	private JLabel title;//闹钟标题
+	private JRadioButton zeroHour;//0小时选项
 	private JRadioButton twoHour;//2小时选项
 	private JRadioButton threeHour;//3小时选项
 	private JComboBox minuteComboBox;//选择分钟

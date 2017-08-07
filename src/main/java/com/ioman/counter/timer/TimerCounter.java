@@ -1,6 +1,7 @@
 package com.ioman.counter.timer;
 
 import com.ioman.counter.entity.TimerPanel;
+import com.ioman.counter.util.FileUtils;
 
 import javax.sound.sampled.*;
 import javax.swing.*;
@@ -52,7 +53,7 @@ public class TimerCounter implements Runnable, ActionListener{
 	 */
 	public void run() {
 		
-		reset();
+		init();
 		
 		addToListener();
 	}
@@ -62,10 +63,26 @@ public class TimerCounter implements Runnable, ActionListener{
 		setButtonStatus();
 		
 		//设置总秒数
-		initTotalSec();
+		resetSec();
 		
 		//重置时间提示文本
 		resetTimeText();
+		
+		FileUtils.write(title, 0L, 0L);
+	}
+	
+	private void init(){
+		
+		initSec();
+		
+		if(leftSec > 0){
+			isRunning = true;
+		}
+		
+		setButtonStatus();
+		
+		timerPanel.getTimeLeftDetail().setText(formatSecond(leftSec));
+		timerPanel.getTimeUsedDetail().setText(formatSecond(usedSec));
 	}
 	
 	private void resetTimeText(){
@@ -76,12 +93,46 @@ public class TimerCounter implements Runnable, ActionListener{
 		timerPanel.getTimeUsedDetail().setText(formatSecond(usedSec));
 	}
 	
-	private void initTotalSec(){
+	//reset the time
+	private void resetSec(){
 		
 		if(isRunning) return;
 		
 		usedSec = 0;
-		leftSec = 0;//初始化
+		leftSec = 0;
+		
+		//统计小时
+		if(timerPanel.getTwoHour().isSelected()){
+			leftSec += 2 * 60 * 60;
+		}else {
+			leftSec += 3 * 60 * 60;
+		}
+		
+		int minute = Integer.parseInt(timerPanel.getMinuteComboBox().getSelectedItem().toString());
+		
+		if(minute > 0) {
+			leftSec += minute * 60;
+		}
+	}
+	
+	//first initialization time
+	private void initSec(){
+		
+		if(isRunning) return;
+		
+		try {
+			String timeInfo = FileUtils.read(title);//初始化
+			String[] arr = timeInfo.split("#");
+			usedSec = Long.parseLong(arr[0]);
+			leftSec = Long.parseLong(arr[1]);
+		} catch (Exception e) {
+			usedSec = 0;
+			leftSec = 0;
+		}
+		
+		if(leftSec > 60){//剩余时间超过1分钟，采用储存的时间
+			return ;
+		}
 		
 		//统计小时
 		if(timerPanel.getTwoHour().isSelected()){
@@ -232,6 +283,8 @@ public class TimerCounter implements Runnable, ActionListener{
 				leftSec--;
 				usedSec++;
 				
+				FileUtils.write(title, usedSec, leftSec);
+				
 				String leftTimeText = formatSecond(leftSec);
 				String usedTimeText = formatSecond(usedSec);
 				timerPanel.getTimeLeftDetail().setText(leftTimeText);
@@ -248,9 +301,8 @@ public class TimerCounter implements Runnable, ActionListener{
 						isAlarm = false;
 					}
 					isRunning = false;
-					setButtonStatus();
-					initTotalSec();
-					resetTimeText();
+					
+					reset();
 				}
 				
 				try {
