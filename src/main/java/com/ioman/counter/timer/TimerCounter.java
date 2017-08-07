@@ -1,6 +1,7 @@
 package com.ioman.counter.timer;
 
 import com.ioman.counter.entity.TimerPanel;
+import com.ioman.counter.util.AudioPlayer;
 import com.ioman.counter.util.FileUtils;
 
 import javax.sound.sampled.*;
@@ -341,37 +342,8 @@ public class TimerCounter implements Runnable, ActionListener{
 			
 			System.out.println("AlarmPlayer alive ... ");
 			
-			//播放音频文件
-			try{
-				AudioInputStream ais = AudioSystem.getAudioInputStream(new File("alarm.wav"));
-				AudioFormat aif = ais.getFormat();
-				SourceDataLine sdl = null;
-				DataLine.Info info = new DataLine.Info(SourceDataLine.class,aif);
-				sdl = (SourceDataLine)AudioSystem.getLine(info);
-				sdl.open(aif);
-				sdl.start();
-				
-				//play
-				int nByte = 0;
-				byte[] buffer = new byte[128];
-				while(isAlarm && nByte != -1){
-					nByte = ais.read(buffer,0,128);
-					if(nByte >= 0){
-						int oByte = sdl.write(buffer, 0, nByte);
-						//System.out.println(oByte);
-					}
-				}
-				sdl.stop();
-			}catch(UnsupportedAudioFileException e){
-				e.printStackTrace();
-			} catch (IOException e) {
-				// TODO 自动产生 catch 区块
-				e.printStackTrace();
-			} catch (LineUnavailableException e) {
-				// TODO 自动产生 catch 区块
-				e.printStackTrace();
-			} finally {
-				System.out.println("AlarmPlayer die ...");
+			while (isAlarm){
+				new AudioPlayer().run();
 			}
 		}
 	}
