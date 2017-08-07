@@ -1,7 +1,6 @@
 package com.ioman.counter.timer;
 
 import com.ioman.counter.entity.TimerPanel;
-import com.ioman.counter.util.AudioPlayer;
 
 import javax.sound.sampled.*;
 import javax.swing.*;
@@ -12,7 +11,6 @@ import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 
 /**
  * <p>Title: com.ioman.counter</p>

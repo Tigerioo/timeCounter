@@ -5,30 +5,16 @@ import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 
-public class AudioPlayer {
+public class AudioPlayer implements Runnable{
 	
 	private String fileName = "alarm.wav";
 	
 	public void setFileName(String fileName) {
 		this.fileName = fileName;
 	}
-	
-	//    程序退出时执行的代码
-	public void doShutDownWork() {
-		Runtime.getRuntime().addShutdownHook(new Thread() {
-			public void run() {
-				try {
-					Toolkit.getDefaultToolkit().beep();
-//					play();
-					play();
-				} catch (Exception ex) {
-				}
-			}
-		});
-	}
-	
+
 	//播放音频文件
-	public void play(){
+	public void run(){
 		try{
 			AudioInputStream ais = AudioSystem.getAudioInputStream(new File(fileName));
 			AudioFormat aif = ais.getFormat();

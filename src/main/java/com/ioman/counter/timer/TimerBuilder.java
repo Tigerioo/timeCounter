@@ -9,7 +9,7 @@ import java.awt.*;
  * <p>Title: com.ioman.counter</p>
  * <p/>
  * <p>
- * Description: 元素建造者
+ * Description: 组件建造者
  * </p>
  * <p/>
  *
