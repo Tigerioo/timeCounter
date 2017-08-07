@@ -60,10 +60,10 @@ public class TimerCounter implements Runnable, ActionListener{
 	
 	private void reset(){
 		
-		setButtonStatus();
-		
 		//设置总秒数
 		resetSec();
+		
+		setButtonStatus();
 		
 		//重置时间提示文本
 		resetTimeText();
@@ -74,10 +74,6 @@ public class TimerCounter implements Runnable, ActionListener{
 	private void init(){
 		
 		initSec();
-		
-		if(leftSec > 0){
-			isRunning = true;
-		}
 		
 		setButtonStatus();
 		
@@ -99,20 +95,29 @@ public class TimerCounter implements Runnable, ActionListener{
 		if(isRunning) return;
 		
 		usedSec = 0;
-		leftSec = 0;
+		leftSec = countLeftSec();
+	}
+	
+	private long countLeftSec(){
+		
+		long totalSec = 0;
 		
 		//统计小时
-		if(timerPanel.getTwoHour().isSelected()){
-			leftSec += 2 * 60 * 60;
+		if(timerPanel.getZeroHour().isSelected()){
+			totalSec += 0;
+		}else if(timerPanel.getTwoHour().isSelected()){
+			totalSec += 2 * 60 * 60;
 		}else {
-			leftSec += 3 * 60 * 60;
+			totalSec += 3 * 60 * 60;
 		}
 		
 		int minute = Integer.parseInt(timerPanel.getMinuteComboBox().getSelectedItem().toString());
 		
 		if(minute > 0) {
-			leftSec += minute * 60;
+			totalSec += minute * 60;
 		}
+		
+		return totalSec;
 	}
 	
 	//first initialization time
@@ -130,22 +135,14 @@ public class TimerCounter implements Runnable, ActionListener{
 			leftSec = 0;
 		}
 		
-		if(leftSec > 60){//剩余时间超过1分钟，采用储存的时间
+		if(leftSec > 10){//剩余时间超过10秒，采用储存的时间
+			isRunning = false;
 			return ;
 		}
 		
 		//统计小时
-		if(timerPanel.getTwoHour().isSelected()){
-			leftSec += 2 * 60 * 60;
-		}else {
-			leftSec += 3 * 60 * 60;
-		}
-		
-		int minute = Integer.parseInt(timerPanel.getMinuteComboBox().getSelectedItem().toString());
-		
-		if(minute > 0) {
-			leftSec += minute * 60;
-		}
+		usedSec = 0;
+		leftSec = countLeftSec();
 	}
 	
 	private void addToListener(){
@@ -153,6 +150,7 @@ public class TimerCounter implements Runnable, ActionListener{
 		timerPanel.getPause().addActionListener(this);
 		timerPanel.getStop().addActionListener(this);
 		
+		timerPanel.getZeroHour().addActionListener(this);
 		timerPanel.getTwoHour().addActionListener(this);
 		timerPanel.getThreeHour().addActionListener(this);
 		
@@ -205,6 +203,9 @@ public class TimerCounter implements Runnable, ActionListener{
 				reset();
 			}
 			
+		}else if(e.getSource() == timerPanel.getZeroHour()){
+			
+			reset();
 		}else if(e.getSource() == timerPanel.getTwoHour()) {
 			
 			reset();
@@ -216,6 +217,9 @@ public class TimerCounter implements Runnable, ActionListener{
 	
 	public void setButtonStatus(){
 		
+		int fontSize = 14;
+		int style = 0;
+		
 		if(isRunning){//如果正在计时中
 			
 			timerPanel.getTimeUsedDetail().setFont(new Font("Dialog", 1, 21));
@@ -226,8 +230,13 @@ public class TimerCounter implements Runnable, ActionListener{
 			timerPanel.getStop().setEnabled(true);
 		}else {
 			
-			timerPanel.getTimeUsedDetail().setFont(new Font("Dialog", 0, 14));
-			timerPanel.getTimeLeftDetail().setFont(new Font("Dialog", 0, 14));
+			if(usedSec > 0){
+				fontSize = 21;
+				style = 1;
+			}
+			
+			timerPanel.getTimeUsedDetail().setFont(new Font("Dialog", style, fontSize));
+			timerPanel.getTimeLeftDetail().setFont(new Font("Dialog", style, fontSize));
 			
 			timerPanel.getStart().setEnabled(true);
 			timerPanel.getPause().setEnabled(false);

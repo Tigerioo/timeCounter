@@ -36,7 +36,7 @@ public class TimerPaint {
 		
 		panel.add(titlePanel(timerPanel.getTitle()));
 		
-		panel.add(hourPanel(timerPanel.getTwoHour(), timerPanel.getThreeHour()));
+		panel.add(hourPanel(timerPanel.getZeroHour(), timerPanel.getTwoHour(), timerPanel.getThreeHour()));
 		panel.add(minutesPanel(timerPanel.getMinuteComboBox()));
 		
 		panel.add(usedTimeInfo(timerPanel.getTimeUsedText(), timerPanel.getTimeLeftText()));

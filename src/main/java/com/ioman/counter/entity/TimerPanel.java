@@ -36,6 +36,14 @@ public class TimerPanel {
 		this.title = title;
 	}
 	
+	public JRadioButton getZeroHour() {
+		return zeroHour;
+	}
+	
+	public void setZeroHour(JRadioButton zeroHour) {
+		this.zeroHour = zeroHour;
+	}
+	
 	public JRadioButton getTwoHour() {
 		return twoHour;
 	}
