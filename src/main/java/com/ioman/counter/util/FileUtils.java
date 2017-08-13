@@ -24,7 +24,7 @@ public class FileUtils {
 		}
 	}
 	
-	public static void write(String title, long usedSec, long leftSec){
+	public static void write(String title, String content){
 		
 		checkDir();
 		
@@ -40,7 +40,7 @@ public class FileUtils {
 			
 			fw = new FileWriter(file);
 			bw = new BufferedWriter(fw);
-			bw.write(usedSec + "#" + leftSec);
+			bw.write(content);
 			
 			System.out.println("Done");
 			
@@ -114,8 +114,4 @@ public class FileUtils {
 		return "0#0";
 	}
 	
-	public static void main(String[] args) throws IOException {
-		FileUtils.write("#2", 100, 100);
-		System.out.println(FileUtils.read("#2"));
-	}
 }

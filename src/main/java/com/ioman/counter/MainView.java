@@ -30,6 +30,8 @@ public class MainView implements ActionListener, ItemListener {
 	
 	private JMenuItem audio, version;
 	
+	private final String VERSION_INFO = "0.2.4";
+	
 	public static void main(String[] args) {
 		
 		MainView view = new MainView();
@@ -135,7 +137,7 @@ public class MainView implements ActionListener, ItemListener {
 		if(e.getSource() == audio){
 			new Thread(new AudioPlayer()).start();
 		}else if(e.getSource() == version){
-			JOptionPane.showMessageDialog(frame, "版本号： 0.2.3");
+			JOptionPane.showMessageDialog(frame, "版本号： " + VERSION_INFO);
 		}
 	
 	}
