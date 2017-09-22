@@ -59,7 +59,6 @@ public class TimerCounter implements Runnable, ActionListener{
 		addToListener();
 		
 		if(isRunning){
-			disable();
 			new Thread(new TickTickRunner()).start();
 		}
 	}
@@ -208,8 +207,6 @@ public class TimerCounter implements Runnable, ActionListener{
 				this.writeToDB(BEGIN_FLAG);
 				new Thread(new TickTickRunner()).start();
 				setButtonStatus();
-				
-				disable();
 			}
 			
 		}else if(e.getSource() == timerPanel.getPause()) {
@@ -219,6 +216,7 @@ public class TimerCounter implements Runnable, ActionListener{
 				this.writeToDB(END_FLAG);
 				setButtonStatus();
 				timerPanel.getStop().setEnabled(true);
+				disable();
 			}
 			
 			
@@ -236,8 +234,6 @@ public class TimerCounter implements Runnable, ActionListener{
 				reset();
 				
 				this.writeToDB(END_FLAG);
-				
-				enable();
 			}
 			
 		}else if(e.getSource() == timerPanel.getZeroHour()){
@@ -265,6 +261,9 @@ public class TimerCounter implements Runnable, ActionListener{
 			timerPanel.getStart().setEnabled(false);
 			timerPanel.getPause().setEnabled(true);
 			timerPanel.getStop().setEnabled(true);
+			
+			disable();
+			
 		}else {
 			
 			if(usedSec > 0){
@@ -278,6 +277,8 @@ public class TimerCounter implements Runnable, ActionListener{
 			timerPanel.getStart().setEnabled(true);
 			timerPanel.getPause().setEnabled(false);
 			timerPanel.getStop().setEnabled(false);
+			
+			enable();
 		}
 	}
 	
