@@ -3,6 +3,7 @@ package com.ioman.counter;
 import com.ioman.counter.entity.TimerPanel;
 import com.ioman.counter.timer.*;
 import com.ioman.counter.util.AudioPlayer;
+import jdk.nashorn.internal.scripts.JO;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -59,7 +60,14 @@ public class MainView implements ActionListener, ItemListener {
 		
 		addMenu();
 		
-		loadContent();
+		String count = JOptionPane.showInputDialog("请输入计时器数量(不超过8个)");
+		
+		while(count == null || "".equals(count)){
+			JOptionPane.showMessageDialog(frame, "不允许为空.");
+			count = JOptionPane.showInputDialog("请输入计时器数量(不超过8个)");
+		}
+		
+		loadContent(Integer.parseInt(count) > 8 ? 8 : Integer.parseInt(count));
 		
 		frame.setVisible(true);
 		
@@ -95,11 +103,9 @@ public class MainView implements ActionListener, ItemListener {
 		frame.setJMenuBar(menuBar);
 	}
 	
-	public void loadContent() {
+	public void loadContent(int counterCount) {
 		
 		panel = new JPanel();
-		
-		int counterCount = 8;
 		
 		panel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		panel.setLayout(new GridLayout(counterCount, 1));
