@@ -31,5 +31,3 @@ out/
 data/
 .idea/
 target/
-target/generated-sources/
-target/generated-test-sources/

@@ -36,7 +36,7 @@ public class TimerPaint {
 		
 		panel.add(titlePanel(timerPanel.getTitle()));
 		
-		panel.add(hourPanel(timerPanel.getZeroHour(), timerPanel.getTwoHour(), timerPanel.getThreeHour()));
+		panel.add(hourPanel(timerPanel.getZeroHour(), timerPanel.getOneHour(), timerPanel.getTwoHour(), timerPanel.getThreeHour()));
 		panel.add(minutesPanel(timerPanel.getMinuteComboBox()));
 		
 		panel.add(usedTimeInfo(timerPanel.getTimeUsedText(), timerPanel.getTimeLeftText()));
@@ -68,17 +68,19 @@ public class TimerPaint {
 	 *
 	 * @return
 	 */
-	private JPanel hourPanel(JRadioButton zeroHour, JRadioButton twoHour, JRadioButton threeHour) {
+	private JPanel hourPanel(JRadioButton zeroHour, JRadioButton oneHour, JRadioButton twoHour, JRadioButton threeHour) {
 		
 		JPanel hourPanel = new JPanel();
-		hourPanel.setLayout(new GridLayout(3, 1));
+		hourPanel.setLayout(new GridLayout(4, 1));
 		
 		ButtonGroup group = new ButtonGroup();
 		group.add(zeroHour);
+		group.add(oneHour);
 		group.add(twoHour);
 		group.add(threeHour);
 		
 		hourPanel.add(zeroHour);
+		hourPanel.add(oneHour);
 		hourPanel.add(twoHour);
 		hourPanel.add(threeHour);
 		

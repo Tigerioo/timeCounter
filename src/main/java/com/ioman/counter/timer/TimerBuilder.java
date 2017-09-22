@@ -20,6 +20,7 @@ public class TimerBuilder {
 	
 	private JLabel title;//闹钟标题
 	private JRadioButton zeroHour;//0小时选项
+	private JRadioButton oneHour;//1小时选项
 	private JRadioButton twoHour;//2小时选项
 	private JRadioButton threeHour;//3小时选项
 	private JComboBox minuteComboBox;//选择分钟
@@ -49,9 +50,11 @@ public class TimerBuilder {
 	public TimerBuilder hour(){
 		
 		JRadioButton zeroHour = new JRadioButton("0小时");
+		JRadioButton oneHour = new JRadioButton("1小时");
 		JRadioButton twoHour = new JRadioButton("2小时", true);
 		JRadioButton threeHour = new JRadioButton("3小时");
 		
+		this.oneHour = oneHour;
 		this.zeroHour = zeroHour;
 		this.twoHour = twoHour;
 		this.threeHour = threeHour;
@@ -113,6 +116,7 @@ public class TimerBuilder {
 		TimerPanel panel = new TimerPanel();
 		panel.setTitle(title);
 		panel.setZeroHour(zeroHour);
+		panel.setOneHour(oneHour);
 		panel.setTwoHour(twoHour);
 		panel.setThreeHour(threeHour);
 		panel.setMinuteComboBox(minuteComboBox);

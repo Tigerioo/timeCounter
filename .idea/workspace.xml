@@ -7,10 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b771fb12-1c4d-4dde-803f-fca41f48a4ea" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/timeCounter_jar/timeCounter.jar" afterPath="$PROJECT_DIR$/out/artifacts/timeCounter_jar/timeCounter.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ioman/T.class" afterPath="$PROJECT_DIR$/target/classes/com/ioman/T.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ioman/counter/MainView.class" afterPath="$PROJECT_DIR$/target/classes/com/ioman/counter/MainView.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ioman/counter/entity/TimerPanel.class" afterPath="$PROJECT_DIR$/target/classes/com/ioman/counter/entity/TimerPanel.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ioman/counter/timer/TimerBuilder.class" afterPath="$PROJECT_DIR$/target/classes/com/ioman/counter/timer/TimerBuilder.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ioman/counter/timer/TimerCounter$1.class" afterPath="$PROJECT_DIR$/target/classes/com/ioman/counter/timer/TimerCounter$1.class" />
@@ -18,19 +15,12 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ioman/counter/timer/TimerCounter$TickTickRunner.class" afterPath="$PROJECT_DIR$/target/classes/com/ioman/counter/timer/TimerCounter$TickTickRunner.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ioman/counter/timer/TimerCounter.class" afterPath="$PROJECT_DIR$/target/classes/com/ioman/counter/timer/TimerCounter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ioman/counter/timer/TimerPaint.class" afterPath="$PROJECT_DIR$/target/classes/com/ioman/counter/timer/TimerPaint.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ioman/counter/util/AudioPlayer.class" afterPath="$PROJECT_DIR$/target/classes/com/ioman/counter/util/AudioPlayer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ioman/counter/util/FileUtils.class" afterPath="$PROJECT_DIR$/target/classes/com/ioman/counter/util/FileUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/ioman/AppTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/ioman/AppTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/timerCounter-1.0.jar" afterPath="$PROJECT_DIR$/target/timerCounter-1.0.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/#1" afterPath="$PROJECT_DIR$/data/#1" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ioman/counter/entity/TimerPanel.java" afterPath="$PROJECT_DIR$/src/main/java/com/ioman/counter/entity/TimerPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ioman/counter/timer/TimerBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/com/ioman/counter/timer/TimerBuilder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ioman/counter/timer/TimerCounter.java" afterPath="$PROJECT_DIR$/src/main/java/com/ioman/counter/timer/TimerCounter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.ioman.AppTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.ioman.AppTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/com.ioman.AppTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/com.ioman.AppTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ioman/counter/timer/TimerPaint.java" afterPath="$PROJECT_DIR$/src/main/java/com/ioman/counter/timer/TimerPaint.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -52,38 +42,14 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TimerBuilder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ioman/counter/timer/TimerBuilder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="25" column="40" lean-forward="false" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TimerCounter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ioman/counter/timer/TimerCounter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="38" column="37" lean-forward="true" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
+            <state relative-caret-position="469">
+              <caret line="246" column="60" lean-forward="true" selection-start-line="246" selection-start-column="60" selection-end-line="246" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3701#3855#0" expanded="true" />
-                <element signature="e#3854#3855#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TimerPanel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ioman/counter/entity/TimerPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="18" column="41" lean-forward="true" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -91,44 +57,19 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="33" column="25" lean-forward="true" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+            <state relative-caret-position="480">
+              <caret line="32" column="7" lean-forward="false" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="TimerPaint.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ioman/counter/timer/TimerPaint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="55">
-              <caret line="19" column="42" lean-forward="false" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+            <state relative-caret-position="289">
+              <caret line="77" column="27" lean-forward="true" selection-start-line="77" selection-start-column="27" selection-end-line="77" selection-end-column="27" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JComponent.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/src.zip!/javax/swing/JComponent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="53565">
-              <caret line="3634" column="16" lean-forward="false" selection-start-line="3634" selection-start-column="16" selection-end-line="3634" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#211105#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ioman/counter/MainView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1905">
-              <caret line="137" column="50" lean-forward="false" selection-start-line="137" selection-start-column="50" selection-end-line="137" selection-end-column="50" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -166,9 +107,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ioman/counter/view/MainView.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ioman/counter/TimerPaint.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ioman/counter/util/AudioPlayer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ioman/counter/entity/TimerPanel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ioman/counter/timer/TimerPaint.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ioman/counter/timer/TimerBuilder.java" />
         <option value="$PROJECT_DIR$/data/#2" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/pom.xml" />
@@ -176,6 +114,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ioman/counter/util/FileUtils.java" />
         <option value="$PROJECT_DIR$/data/#1" />
         <option value="$PROJECT_DIR$/src/main/java/com/ioman/counter/MainView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ioman/counter/entity/TimerPanel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ioman/counter/timer/TimerBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ioman/counter/timer/TimerPaint.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ioman/counter/timer/TimerCounter.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
       </list>
@@ -731,8 +672,20 @@
           <properties />
           <option name="timeStamp" value="10" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ioman/counter/timer/TimerCounter.java</url>
+          <line>105</line>
+          <properties />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ioman/counter/timer/TimerCounter.java</url>
+          <line>56</line>
+          <properties />
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="18" />
+      <option name="time" value="21" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -759,9 +712,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1230">
           <caret line="85" column="61" lean-forward="true" selection-start-line="85" selection-start-column="61" selection-end-line="85" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -965,24 +916,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ioman/counter/timer/TimerBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="25" column="40" lean-forward="false" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ioman/counter/timer/TimerPaint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="25" column="16" lean-forward="false" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ioman/T.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
@@ -1054,13 +987,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ioman/counter/MainView.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1905">
-          <caret line="137" column="50" lean-forward="false" selection-start-line="137" selection-start-column="50" selection-end-line="137" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+        <state relative-caret-position="55">
+          <caret line="19" column="42" lean-forward="false" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ioman/counter/entity/TimerPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-785">
+          <caret line="47" column="38" lean-forward="false" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1075,38 +1014,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ioman/counter/MainView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="19" column="42" lean-forward="false" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+        <state relative-caret-position="1905">
+          <caret line="137" column="50" lean-forward="false" selection-start-line="137" selection-start-column="50" selection-end-line="137" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ioman/counter/timer/TimerBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="118" column="34" lean-forward="true" selection-start-line="118" selection-start-column="34" selection-end-line="118" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ioman/counter/timer/TimerPaint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="77" column="27" lean-forward="true" selection-start-line="77" selection-start-column="27" selection-end-line="77" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ioman/counter/timer/TimerCounter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="38" column="37" lean-forward="true" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
+        <state relative-caret-position="469">
+          <caret line="246" column="60" lean-forward="true" selection-start-line="246" selection-start-column="60" selection-end-line="246" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3701#3855#0" expanded="true" />
-            <element signature="e#3854#3855#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ioman/counter/entity/TimerPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="18" column="41" lean-forward="true" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="33" column="25" lean-forward="true" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+        <state relative-caret-position="480">
+          <caret line="32" column="7" lean-forward="false" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
           <folding />
         </state>
       </provider>

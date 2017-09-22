@@ -108,6 +108,8 @@ public class TimerCounter implements Runnable, ActionListener{
 		//统计小时
 		if(timerPanel.getZeroHour().isSelected()){
 			totalSec += 0;
+		}else if(timerPanel.getOneHour().isSelected()){
+			totalSec += 1 * 60 * 60;
 		}else if(timerPanel.getTwoHour().isSelected()){
 			totalSec += 2 * 60 * 60;
 		}else {
@@ -165,6 +167,7 @@ public class TimerCounter implements Runnable, ActionListener{
 		timerPanel.getStop().addActionListener(this);
 		
 		timerPanel.getZeroHour().addActionListener(this);
+		timerPanel.getOneHour().addActionListener(this);
 		timerPanel.getTwoHour().addActionListener(this);
 		timerPanel.getThreeHour().addActionListener(this);
 		
@@ -180,6 +183,7 @@ public class TimerCounter implements Runnable, ActionListener{
 	
 	private void disable(){
 		timerPanel.getZeroHour().setEnabled(false);
+		timerPanel.getOneHour().setEnabled(false);
 		timerPanel.getTwoHour().setEnabled(false);
 		timerPanel.getThreeHour().setEnabled(false);
 		timerPanel.getMinuteComboBox().setEnabled(false);
@@ -187,6 +191,7 @@ public class TimerCounter implements Runnable, ActionListener{
 	
 	private void enable(){
 		timerPanel.getZeroHour().setEnabled(true);
+		timerPanel.getOneHour().setEnabled(true);
 		timerPanel.getTwoHour().setEnabled(true);
 		timerPanel.getThreeHour().setEnabled(true);
 		timerPanel.getMinuteComboBox().setEnabled(true);
@@ -237,6 +242,9 @@ public class TimerCounter implements Runnable, ActionListener{
 			}
 			
 		}else if(e.getSource() == timerPanel.getZeroHour()){
+			
+			reset();
+		}else if(e.getSource() == timerPanel.getOneHour()) {
 			
 			reset();
 		}else if(e.getSource() == timerPanel.getTwoHour()) {
